@@ -1,0 +1,6 @@
+@import "./reset.css";
+html, body {
+    background: url('../img/bg.png') no-repeat;
+    background-size: cover;
+    height: 100%;
+}
