@@ -1,0 +1,137 @@
+/* 後代元素選擇器 (space)*/
+
+.parent p{
+    border: 1px solid #F90;
+}
+
+.child a{
+    color: rgb(209, 44, 113)
+}
+
+.child a:hover {
+    color: rgb(0, 26, 255);
+    background-color: rgb(38, 85, 46);
+}
+
+.child a:active {
+    color: #f90;
+}
+
+.child a:visited {
+    color: #ccc;
+}
+
+.parent-child-default {
+    color: rgb(42, 71, 197);
+}
+
+.parent-child-active {
+    background-color: rgb(38, 85, 46);
+    color: #f90;
+}
+
+.parent-child-disabled {
+    color: #ccc;
+}
+
+
+
+/* 直屬後代元素選擇器 (>) */
+.parent > p{
+    border: 1px solid #333;
+}
+
+/* 兄弟元素選擇器 (+, ~) */
+
+.indent ~ div {
+    /* background-color: #999; */
+}
+
+/* 屬性(attribute)選擇器 element[attr] */
+
+
+.links {
+    display: block;
+}
+
+.links a {
+    font-size: 1rem;
+}
+
+.links a[href="https://www.google.com"] {
+    color: #09F;
+}
+
+.links [data-type="cygames"] {
+    font-size: 0.8rem;
+    color: rgb(255, 30, 0);
+}
+
+img {
+    width: 180px;
+}
+
+img[alt="img_fb"] {
+    padding: 0.5rem;
+    border: 1px dashed #999;
+}
+
+.group {
+    display: block;
+    width: 100%;
+}
+
+.group span {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    border: 1px solid #000;
+    margin-right: 0.5rem;
+}
+
+.group [class^='gp-'] { /* 「^='gp'」意思為class name開頭等於gp的元素 */
+    background-color: #F90;
+}
+
+.group [class$='001'] { /* 「$='001'」意思為class name結尾等於001的元素 */
+    background-color: rgb(36, 147, 175);
+}
+
+.group [data-type ~= "first"]::before { /* 「data-type ~= "first"」意思為data-type含有first屬性的元素 */
+    content: "1";
+}
+
+.group [data-type ~= "last"]::before { /* 「data-type ~= "last"」意思為data-type含有last屬性的元素 */
+    content: "Boo!!";
+}
+
+.order ol li::first-letter { /* ::first-letter 為元素第一個字元 ::first-line 則是第一行所有字元 */
+    font-size: 2rem;
+    color: #efefef;
+}
+
+ul.list li:nth-child(2) { /* 第n個 */
+    color: #999;
+}
+
+ul.list li:first-child { /* 第1個 */
+    color: #F90;
+}
+
+ul.list li:last-child { /* 倒數第1個 */
+    color: rgb(206, 28, 28);
+}
+
+ul.list li:nth-last-child(2) { /* 倒數第n個 */
+    color: rgb(206, 28, 28);
+}
+
+.for_ul_list ul {
+    padding: 0 1rem;
+    list-style: circle;
+}
+
+.for_ul_list ul:nth-of-type(2) { /* 第n個同類別元素 */
+    border: 1px dashed #999;
+    background: rgb(36, 147, 175);
+}

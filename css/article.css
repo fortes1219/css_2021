@@ -1,0 +1,13 @@
+article {
+    font-size: 1em;
+}
+
+article header {
+    font-size: 1em;
+}
+
+.article_banner {
+    width: 100%;
+    border: 1px solid green;
+    padding: 1rem;
+}
