@@ -1,0 +1,24 @@
+@media screen and (max-width: 768px) {
+    body {
+        background: #efefef;
+    }
+
+    .menu {
+        justify-content: flex-end;
+        background-color: #000;
+    }
+
+    .menu ul.pc_menu {
+        display: none;
+    }
+
+    .mobile_menu_trigger {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .mobile_menu {
+        display: none !important;
+    }
+}

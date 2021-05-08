@@ -6,89 +6,30 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/media_queries.css">
   <title>CSS 2021-Top</title>
 </head>
 
 <body>
   <div class="app">
     <nav class="menu">
-      <ul>
+      <!--PC Menu-->
+      <ul class="pc_menu">
         <li>HOME</li>
         <li>ABOUT</li>
         <li>PRODUCT</li>
         <li>CONTACT</li>
       </ul>
+      <!--Mobile Menu-->
+      <input type="checkbox" class="mobile_menu_trigger">
+      <ul class="mobile_menu">
+        <li><a href="javascript: void;">HOME</a></li>
+        <li><a href="javascript: void;">ABOUT</a></li>
+        <li><a href="javascript: void;">PRODUCT</a></li>
+        <li><a href="javascript: void;">NEWS</a></li>
+        <li><a href="javascript: void;">CONTACT</a></li>
+      </ul>
     </nav>
-    <div class="article_banner">
-      <img src="https://heho.com.tw/wp-content/uploads/2021/03/1615457749.006.jpg">
-    </div>
-    <div class="card-block">
-      <div class="card" data-layout="inline">
-        <span class="badge" data-type="sale">
-          <b>SALE!</b>
-        </span>
-        <div class="card-info">
-          <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-          <h6>Coffee Cup</h6>
-          <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-        </div>
-        <button class="card-button-pcmode" data-type="detail">詳細 1</button>
-      </div>
-      <div class="card" data-layout="inline">
-        <span class="badge" data-type="hot">
-          <b>HOT!</b>
-        </span>
-        <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-        <div class="card-info">
-          <h6>Coffee Cup</h6>
-          <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-        </div>
-        <button class="card-button-pcmode" data-type="detail">詳細 2</button>
-      </div>
-      <div class="card" data-layout="inline">
-        <span class="badge" data-type="hot">
-          <b>HOT!</b>
-        </span>
-        <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-        <div class="card-info">
-          <h6>Coffee Cup</h6>
-          <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-        </div>
-        <button class="card-button-pcmode" data-type="detail">詳細 3</button>
-      </div>
-    </div>
-    <div class="flex-block">
-      <div class="flex-card-block" data-flex="1">
-        <div class="flex-card">
-          <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-          <div class="card-info">
-            <h6>Coffee Cup</h6>
-            <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-            <button class="card-button-pcmode" data-type="detail">詳細 1</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex-card-block" data-flex="1">
-        <div class="flex-card">
-          <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-          <div class="card-info">
-            <h6>Coffee Cup</h6>
-            <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-            <button class="card-button-pcmode" data-type="detail">詳細 2</button>
-          </div>
-        </div>
-      </div>
-      <div class="flex-card-block" data-flex="1">
-        <div class="flex-card">
-          <img src="img/coffee-cup.jpg" alt="product coffee_cup">
-          <div class="card-info">
-            <h6>Coffee Cup</h6>
-            <span>這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯這是一個咖啡杯(廢話)</span>
-            <button class="card-button-pcmode" data-type="detail">詳細 3</button>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </body>
 
