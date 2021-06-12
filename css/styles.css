@@ -4,7 +4,6 @@
 @import "./aside.css";
 @import "./footer.css";
 @import "./article.css";
-
 html, body {
     background-size: cover;
     height: 100%;
@@ -27,25 +26,115 @@ body {
     height: 76px;
     box-sizing: border-box;
     padding: 1rem;
-    background: rgba(255,255,255, 0.4);
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .menu ul.pc_menu {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: center;
     align-items: center;
     width: 100%;
 }
 
 .menu ul.pc_menu li {
+    position: relative;
+    float: left;
     width: 8rem;
     text-align: center;
     font-size: 1rem;
     color: #333;
     padding: 0.5rem 1rem;
     box-sizing: border-box;
-    margin: 0 0.5rem;
+}
+
+ul.pc_menu li ul {
+    display: none;
+    float: left;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+ul.pc_menu li:hover>ul {
+    display: block;
+}
+
+ul.pc_menu ul li:hover>ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+ul.pc_menu li.parent::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+}
+
+/* 子項目的ul改以div包覆的狀況 */
+
+ul.complex_menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+ul.complex_menu li {
+    position: relative;
+    float: left;
+    width: 8rem;
+    text-align: center;
+    font-size: 1rem;
+    color: #333;
+    padding: 0.5rem 1rem;
+    box-sizing: border-box;
+}
+
+ul.complex_menu li ul {
+    display: none;
+    float: left;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    border: 1px solid #ccc;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+ul.complex_menu li:hover > div > ul {
+    display: block;
+}
+
+ul.complex_menu ul li:hover > div > ul {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+}
+
+ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: block;
+    border-top: 4px solid transparent;
+    border-left: 4px solid #000;
+    border-right: 4px solid transparent;
+    border-bottom: 4px solid transparent;
 }
 
 /* 手機選單 */
@@ -66,7 +155,7 @@ body {
     background: url("../img/mobile_menu_bg.svg") no-repeat center;
 }
 
-.mobile_menu_trigger:checked ~ .mobile_menu {
+.mobile_menu_trigger:checked~.mobile_menu {
     display: block;
 }
 
@@ -84,7 +173,7 @@ body {
     border-bottom: 1px dashed #fff;
 }
 
-.mobile_menu li a{
+.mobile_menu li a {
     color: #fff;
 }
 
@@ -94,18 +183,17 @@ body {
     padding: 1rem;
     box-sizing: border-box;
 }
+
 .rwd_table {
     width: 100%;
 }
-.rwd_table,
-.rwd_table th,
-.rwd_table td {
+
+.rwd_table, .rwd_table th, .rwd_table td {
     border-collapse: collapse;
     border: 1px solid;
 }
 
-.rwd_table th,
-.rwd_table td {
+.rwd_table th, .rwd_table td {
     padding: 0.5rem;
 }
 
@@ -119,8 +207,7 @@ body {
     table.type_1 {
         display: block;
     }
-    table.type_1 th,
-    table.type_1 td {
+    table.type_1 th, table.type_1 td {
         vertical-align: top;
     }
     table.type_1 th {
@@ -131,7 +218,7 @@ body {
         display: block;
         float: left;
     }
-    table.type_1 thead tr{
+    table.type_1 thead tr {
         display: block;
     }
     table.type_1 tbody {
@@ -150,5 +237,4 @@ body {
         min-height: 1rem;
         text-align: left;
     }
-
 }

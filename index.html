@@ -17,7 +17,27 @@
       <ul class="pc_menu">
         <li><a href="index.html">HOME</a></li>
         <li><a href="index.html">ABOUT</a></li>
-        <li><a href="index.html">PRODUCT</a></li>
+        <li>
+          <a href="index.html">PRODUCT</a>
+          <ul>
+            <li><a href="index.html">Product_1_1</a></li>
+            <li class="parent">
+              <a href="index.html">Product_1_2</a>
+              <ul>
+                <li><a href="index.html">Product_2_1</a></li>
+                <li><a href="index.html">Product_2_2</a></li>
+                <li class="parent">
+                  <a href="index.html">Product_2_3</a>
+                  <ul>
+                    <li><a href="index.html">Product_3_1</a></li>
+                    <li><a href="index.html">Product_3_2</a></li>
+                    <li><a href="index.html">Product_3_3</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
         <li><a href="index.html">CONTACT</a></li>
       </ul>
       <!--Mobile Menu-->
@@ -30,6 +50,40 @@
         <li><a href="index.html">CONTACT</a></li>
       </ul>
     </nav>
+    <!--- 子項目的ul改以div包覆的狀況 --->
+    <ul class="complex_menu">
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="index.html">ABOUT</a></li>
+      <li>
+        <a href="index.html">PRODUCT</a>
+        <div>
+          <ul>
+            <li><a href="index.html">Product_1_1</a></li>
+            <li>
+              <a href="index.html">Product_1_2</a>
+              <div>
+                <ul>
+                  <li><a href="index.html">Product_2_1</a></li>
+                  <li><a href="index.html">Product_2_2</a></li>
+                  <li>
+                    <a href="index.html">Product_2_3</a>
+                    <div>
+                      <ul>
+                        <li><a href="index.html">Product_3_1</a></li>
+                        <li><a href="index.html">Product_3_2</a></li>
+                        <li><a href="index.html">Product_3_3</a></li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="index.html">CONTACT</a></li>
+    </ul>
+    <!----->
     <div class="table_block">
       <table class="rwd_table type_1">
         <thead>
