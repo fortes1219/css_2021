@@ -4,6 +4,7 @@
 @import "./aside.css";
 @import "./footer.css";
 @import "./article.css";
+@import "./iconfont.css";
 html, body {
     background-size: cover;
     height: 100%;
@@ -237,4 +238,14 @@ ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
         min-height: 1rem;
         text-align: left;
     }
+}
+
+/* icon fonts style */
+
+.app-trophy::before {
+    position: relative;
+    top: 5px;
+    left: -5px;
+    font-size: 24px;
+    color: #06C;
 }
