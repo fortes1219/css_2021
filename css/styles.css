@@ -26,7 +26,6 @@ body {
     height: 76px;
     box-sizing: border-box;
     padding: 1rem;
-    background: rgba(255, 255, 255, 0.4);
 }
 
 .menu ul.pc_menu {
@@ -159,7 +158,7 @@ ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
     display: block;
 }
 
-.mobile_menu {
+/* .mobile_menu {
     display: none;
     position: absolute;
     top: 76px;
@@ -175,7 +174,7 @@ ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
 
 .mobile_menu li a {
     color: #fff;
-}
+} */
 
 /* table style */
 
@@ -236,5 +235,79 @@ ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
         display: block;
         min-height: 1rem;
         text-align: left;
+    }
+}
+
+/* animation */
+
+.transition {
+    transition: all 1s ease-in;
+}
+
+.animation_trigger {
+    position: relative;
+    transition: all 1s ease-in;
+    padding: 0.5rem 1rem;
+    background: linear-gradient(#F90, #F60);
+    color: #fff;
+    border-radius: 4px;
+    box-shadow: 0px 0px 3px rgba(0,0,0,0.6);
+    cursor: pointer;
+    /* animation-fill-mode: forwards; */
+}
+
+.animation_trigger::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 20px;
+    height: 40px;
+    border-radius: 50%;
+    background: #fff;
+    filter: blur(20px);
+    animation: gradient 2s linear alternate infinite;
+}
+
+.target {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #F20;
+    transform: scale(1);
+}
+
+.target.active {
+    animation: ball 1.5s alternate linear;
+}
+
+.animation_trigger:hover ~.target{
+    animation: ball 1.5s alternate linear;
+}
+
+@keyframes gradient {
+    0% {
+        transition: all 1s ease-in;
+        filter: blur(20px);
+        left: 0;
+    }
+
+    100% {
+        transition: all 1s ease-in;
+        filter: blur(30px);
+        left: 100%;
+    }
+}
+
+@keyframes ball {
+    0% {
+        left: 0px;
+        transform: scale(1);
+    }
+
+    100% {
+        left: 600px;
+        transform: scale(0.5);
     }
 }

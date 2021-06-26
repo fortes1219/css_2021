@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
   <link rel="stylesheet" href="./css/styles.css">
   <link rel="stylesheet" href="./css/media_queries.css">
+  <link rel="stylesheet" href="./css/mmenu.css">
   <title>CSS 2021-Top</title>
 </head>
 
@@ -16,7 +17,7 @@
       <!--PC Menu-->
       <ul class="pc_menu">
         <li><a href="index.html">HOME</a></li>
-        <li><a href="index.html">ABOUT</a></li>
+        <li class="transition" style="cursor: pointer;">ABOUT</li>
         <li>
           <a href="index.html">PRODUCT</a>
           <ul>
@@ -41,84 +42,134 @@
         <li><a href="index.html">CONTACT</a></li>
       </ul>
       <!--Mobile Menu-->
-      <input type="checkbox" class="mobile_menu_trigger">
-      <ul class="mobile_menu">
-        <li><a href="index.html">HOME</a></li>
-        <li><a href="index.html">ABOUT</a></li>
-        <li><a href="index.html">PRODUCT</a></li>
-        <li><a href="index.html">NEWS</a></li>
-        <li><a href="index.html">CONTACT</a></li>
-      </ul>
-    </nav>
-    <!--- 子項目的ul改以div包覆的狀況 --->
-    <ul class="complex_menu">
-      <li><a href="index.html">HOME</a></li>
-      <li><a href="index.html">ABOUT</a></li>
-      <li>
-        <a href="index.html">PRODUCT</a>
-        <div>
-          <ul>
-            <li><a href="index.html">Product_1_1</a></li>
-            <li>
-              <a href="index.html">Product_1_2</a>
-              <div>
-                <ul>
-                  <li><a href="index.html">Product_2_1</a></li>
-                  <li><a href="index.html">Product_2_2</a></li>
-                  <li>
-                    <a href="index.html">Product_2_3</a>
-                    <div>
-                      <ul>
-                        <li><a href="index.html">Product_3_1</a></li>
-                        <li><a href="index.html">Product_3_2</a></li>
-                        <li><a href="index.html">Product_3_3</a></li>
-                      </ul>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </li>
+      <!-- <input type="checkbox" class="mobile_menu_trigger"> -->
+      <span class="mobile_menu_trigger">
+        <a href="#mmenu"
+        style="
+          text-indent: -9999px;
+          width: 100%;
+          height: 100%;
+          display: block;
+        "
+        >menu</a>
+      </span> 
+      <nav id="mmenu">
+        <ul>
+            <li><a href="index.html">回到首頁</a></li>
+              <li>
+                  <a href="javascript: void();">產品資訊</a>
+                  <ul>
+                      <li>
+                          <a href="javascript: void();">三菱電機</a>
+                          <ul>
+                              <li>
+                                  <a href="javascript: void();">家用空調產品</a>
+                                  <ul>
+                                      <li><a href="javascript: void();">變頻一對一壁掛冷暖/冷專</a></li>
+                                      <li><a href="javascript: void();">變頻一對一吊隱</a></li>
+                                      <li><a href="javascript: void();">變頻一對多系統</a></li>
+                                  </ul>
+                              </li>
+                              <li><a href="javascript: void();">店鋪用空調設備</a></li>
+                              <li><a href="javascript: void();">商用空調產品</a></li>
+                              <li><a href="javascript: void();">能源回收、換氣設備</a></li>
+                              <li>
+                                  <a href="javascript: void();">浴室通風、乾燥設備</a>
+                                  <ul>
+                                      <li><a href="javascript: void();">雙氣流空氣簾</a></li>
+                                      <li><a href="javascript: void();">換氣扇</a></li>
+                                      <li><a href="javascript: void();">浴室乾燥設備</a></li>
+                                      <li><a href="javascript: void();">噴射式乾手機環保設備</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="javascript: void();">三菱重工</a>
+                          <ul>
+                              <li>
+                                  <a href="javascript: void();">家用空調產品</a>
+                                  <ul>
+                                      <li><a href="javascript: void();">室內機</a></li>
+                                      <li><a href="javascript: void();">室外機</a></li>
+                                  </ul>
+                              </li>
+                              <li>
+                                  <a href="javascript: void();">商用空調產品</a>
+                                  <ul>
+                                      <li><a href="javascript: void();">室內機</a></li>
+                                      <li><a href="javascript: void();">室外機</a></li>
+                                      <li><a href="javascript: void();">控制器系列</a></li>
+                                  </ul>
+                              </li>
+                          </ul>
+                      </li>
+                      <li>
+                          <a href="javascript: void();">太陽節能系統</a>
+                          <ul>
+                              <li><a href="javascript: void();">太陽能板節能系統</a></li>
+                              <li><a href="javascript: void();">工程實績</a></li>
+                          </ul>
+                      </li>
+                  </ul>
+              </li>
+              <li><a href="javascript: void();">公司簡介</a></li>
+              <li><a href="javascript: void();">新聞消息</a></li>
+              <li><a href="javascript: void();">電子型錄</a></li>
+              <li>
+                  <a href="javascript: void();">建案實績</a>
+                  <ul>
+                      <li>
+                          <a href="javascript: void();">台灣地區</a>
+                          <ul>
+                              <li><a href="javascript: void();">建案大樓類</a></li>
+                              <li><a href="javascript: void();">公共工程類</a></li>
+                          </ul>
+                      </li>
+                      <li><a href="javascript: void();">中國地區</a></li>
+                      <li><a href="javascript: void();">VRF專案實績表</a></li>
+                      <li><a href="javascript: void();">三菱實績示意</a></li>
+                  </ul>
+              </li>
+              <li><a href="javascript: void();">技術服務</a></li>
           </ul>
-        </div>
-      </li>
-      <li><a href="index.html">CONTACT</a></li>
-    </ul>
+      </nav>
+    </nav>
     <!----->
-    <div class="table_block">
-      <table class="rwd_table type_1">
-        <thead>
-          <th>head_1</th>
-          <th>head_2</th>
-          <th>head_3</th>
-          <th>head_4</th>
-          <th>head_5</th>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td>
-            <td>data_2</td>
-            <td>data_3</td>
-            <td>data_4</td>
-            <td>data_5</td>
-          </tr>
-          <tr>
-            <td>data_1</td>
-            <td>data_2</td>
-            <td>data_3</td>
-            <td>data_4</td>
-            <td>data_5</td>
-          </tr>
-          <tr>
-            <td>data_1</td>
-            <td>data_2</td>
-            <td>data_3</td>
-            <td>data_4</td>
-            <td>data_5</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <span class="animation_trigger">Run Animation</span>
+    <br><br>
+    <div class="target"></div>
   </div>
 </body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="./js/mmenu.js"></script>
+<script>
+$(document).ready(function(){
+  $("#mmenu").mmenu({
+		counters: true,
+		backButton: true,
+	})
 
+  $(".pc_menu li:nth-child(2)").click(function(){
+    $(this).toggleClass("active")
+  })
+
+  $(".animation_trigger").click(function(){
+    $(".target").addClass("active")
+    setTimeout(() => {
+      $(".target").removeClass("active")
+    }, 1500)
+  })
+})
+// $(".animation_trigger") = document.getElementsByClassName("animation_trigger")
+</script>
+<style>
+  .transition {
+    transition: all 0.3s linear;
+  }
+
+  .pc_menu li:nth-child(2).active {
+    background: #666;
+  }
+</style>
 </html>
