@@ -282,9 +282,9 @@ ul.complex_menu li > div:not(:empty) ul > li div:not(:empty)::after {
     animation: ball 1.5s alternate linear;
 }
 
-.animation_trigger:hover ~.target{
+/* .animation_trigger:hover ~.target{
     animation: ball 1.5s alternate linear;
-}
+} */
 
 @keyframes gradient {
     0% {
